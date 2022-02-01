@@ -24,7 +24,7 @@ public class ServidorService {
 	
 	public MessageResponseDTO criar(ServidorDTO servidorDTO) {
 		Servidor servidor = servidorMapper.toModel(servidorDTO);
-		Servidor novoServidor = servidorRepository.save(null);
+		Servidor novoServidor = servidorRepository.save(servidor);
 		MessageResponseDTO messageResponse = createMessageResponse("Servidor criado com ID ", novoServidor.getId());
 		return messageResponse;
 	}
