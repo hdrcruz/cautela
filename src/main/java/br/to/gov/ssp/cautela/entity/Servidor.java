@@ -38,6 +38,6 @@ public class Servidor {
     private String cpf;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    private List<Arma> phones = new ArrayList<>();
+    private List<Arma> armas = new ArrayList<>();
 
 }
