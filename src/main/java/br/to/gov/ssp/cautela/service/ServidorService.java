@@ -1,6 +1,7 @@
 package br.to.gov.ssp.cautela.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,12 +21,6 @@ public class ServidorService {
 	private final ServidorRepository servidorRepository;
 	
 	private final ServidorMapper servidorMapper;
-
-	@Autowired
-	public ServidorService(ServidorRepository servidorRepository) {
-		super();
-		this.servidorRepository = servidorRepository;
-	}
 	
 	public MessageResponseDTO criar(ServidorDTO servidorDTO) {
 		Servidor servidor = servidorMapper.toModel(servidorDTO);
